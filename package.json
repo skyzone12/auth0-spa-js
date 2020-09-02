@@ -8,6 +8,7 @@
   "types": "dist/typings/index.d.ts",
   "module": "dist/auth0-spa-js.production.esm.js",
   "scripts": {
+    "prepare": "npm run build",
     "dev": "rimraf dist && rollup -c --watch",
     "start": "npm run dev",
     "docs": "typedoc --options ./typedoc.js --module commonjs",
