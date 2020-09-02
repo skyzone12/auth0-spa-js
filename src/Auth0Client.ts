@@ -304,7 +304,15 @@ export default class Auth0Client {
   }
 
   // https://github.com/NShahri/auth0-spa-js/tree/username-password-login
-  public async loginWithUsernameAndPassword(options: any = {}) {
+  public async loginWithUsernameAndPassword(
+    options: {
+      redirectUri?: string;
+      appState?: string;
+      username?: string;
+      password?: string;
+      realm?: string;
+    } = {}
+  ) {
     const {
       redirectUri,
       appState,
@@ -349,7 +357,15 @@ export default class Auth0Client {
   }
 
   // https://github.com/NShahri/auth0-spa-js/tree/username-password-login
-  public async signUpWithUsernameAndPassword(options: any = {}) {
+  public async signUpWithUsernameAndPassword(
+    options: {
+      username?: string;
+      email?: string;
+      password?: string;
+      realm?: string;
+      metadata?: any;
+    } = {}
+  ) {
     const { username, email, password, realm, metadata } = options;
 
     const authenticateBody = {
@@ -390,7 +406,13 @@ export default class Auth0Client {
   }
 
   // https://github.com/NShahri/auth0-spa-js/tree/username-password-login
-  public async resetPasswordWithUsername(options: any = {}) {
+  public async resetPasswordWithUsername(
+    options: {
+      username?: string;
+      email?: string;
+      realm?: string;
+    } = {}
+  ) {
     const { username, email, realm } = options;
 
     const authenticateBody = {
