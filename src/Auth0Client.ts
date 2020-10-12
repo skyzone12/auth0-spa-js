@@ -307,7 +307,7 @@ export default class Auth0Client {
   public async loginWithUsernameAndPassword(
     options: {
       redirectUri?: string;
-      appState?: string;
+      appState?: any;
       username?: string;
       password?: string;
       realm?: string;
@@ -345,6 +345,7 @@ export default class Auth0Client {
 
     if (response.ok) {
       const url = await this.buildAuthorizeUrl({
+        appState,
         login_ticket: login_ticket,
         realm
       });
