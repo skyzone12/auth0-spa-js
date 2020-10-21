@@ -1,9 +1,9 @@
 {
   "author": "Auth0",
-  "name": "@auth0/auth0-spa-js",
+  "name": "@smolltd/auth0-spa-js",
   "description": "Auth0 SDK for Single Page Applications using Authorization Code Grant Flow with PKCE",
   "license": "MIT",
-  "version": "1.12.1",
+  "version": "1.12.1-0",
   "main": "dist/lib/auth0-spa-js.cjs.js",
   "types": "dist/typings/index.d.ts",
   "module": "dist/auth0-spa-js.production.esm.js",
@@ -88,7 +88,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/auth0/auth0-spa-js.git"
+    "url": "git://github.com/smolltd/auth0-spa-js.git"
   },
   "bugs": {
     "url": "https://github.com/auth0/auth0-spa-js/issues"
@@ -121,5 +121,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
